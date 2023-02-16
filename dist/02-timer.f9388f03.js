@@ -561,6 +561,7 @@ var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 var _flatpickr = require("flatpickr");
 var _flatpickrDefault = parcelHelpers.interopDefault(_flatpickr);
 var _flatpickrMinCss = require("flatpickr/dist/flatpickr.min.css");
+var _notiflixNotifyAio = require("notiflix/build/notiflix-notify-aio");
 let targetTime;
 const refs = {
     inputTime: document.querySelector("input#datetime-picker"),
@@ -576,7 +577,7 @@ const options = {
     defaultDate: new Date(),
     minuteIncrement: 1,
     onClose (selectedDates) {
-        if (selectedDates[0].getTime() <= Date.now()) alert("Please choose a date in the future");
+        if (selectedDates[0].getTime() <= Date.now()) (0, _notiflixNotifyAio.Notify).warning("Please choose a date in the future");
         else {
             refs.startBtn.disabled = false;
             targetTime = selectedDates[0].getTime();
@@ -623,7 +624,7 @@ function onStartBtnClick() {
     timer.start(targetTime);
 }
 
-},{"flatpickr":"llQu5","flatpickr/dist/flatpickr.min.css":"eVN6V","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"llQu5":[function(require,module,exports) {
+},{"flatpickr":"llQu5","flatpickr/dist/flatpickr.min.css":"eVN6V","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3","notiflix/build/notiflix-notify-aio":"eXQLZ"}],"llQu5":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 var _options = require("./types/options");
