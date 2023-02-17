@@ -11,14 +11,21 @@ function onSubmit(event) {
 
 let delay = +refs.inputForm.delay.value; 
 const step = +refs.inputForm.step.value;
-const amount = +refs.inputForm.amount.value;
+  const amount = +refs.inputForm.amount.value;
+  
 
-for (let i = 1; i <= amount; i+=1) {
+  if (delay < 0 || step < 0 || amount < 0) {
+  Notify.warning('Значення не можут бути меньші за 0')
+  } else {
+    for (let i = 1; i <= amount; i+=1) {
   createPromise(i, delay).then(onResolve).catch(onReject); 
   delay += step;   
 }
   event.currentTarget.reset(); 
 }
+}
+
+
 
 function createPromise(position, delay) {
 
