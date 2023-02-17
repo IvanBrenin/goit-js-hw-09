@@ -26,23 +26,29 @@ const options = {
       }
   },
 };
+
+let timerId = null;
 const timeSelector = new flatpickr(refs.inputTime, options)
 const timer = {
     start(finishTime) {
         refs.startBtn.disabled = true;
         refs.startBtn.removeEventListener('click', onStartBtnClick);
-        setInterval(() => {
+        timerId = setInterval(() => {
             populateTimer(convertMs(finishTime - Date.now()))
         }, 1000)
-        
     }
 };
+
+
 
 function addLeadingZero(value) {
     return String(value).padStart(2, 0)
 }
 
 function convertMs(ms) {
+    if (ms < 1000) {
+        clearInterval(timerId)
+    }
   const second = 1000;
   const minute = second * 60;
   const hour = minute * 60;
