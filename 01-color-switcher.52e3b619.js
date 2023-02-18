@@ -583,6 +583,6 @@ function onStopClick() {
     refs.startBtn.addEventListener("click", onStartClick);
 }
 
-},{}]},["cc1bQ","cYUEh"], "cYUEh", "parcelRequire94c2")
+},{}]},["cc1bQ","cYUEh"], "cYUEh", "parcelRequired7c6")
 
 //# sourceMappingURL=01-color-switcher.52e3b619.js.map

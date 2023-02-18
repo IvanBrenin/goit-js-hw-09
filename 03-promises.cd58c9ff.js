@@ -592,6 +592,6 @@ function onReject(error) {
     (0, _notiflixNotifyAio.Notify).failure(error);
 }
 
-},{"notiflix/build/notiflix-notify-aio":"eXQLZ"}]},["2uA9t","8tzFL"], "8tzFL", "parcelRequire94c2")
+},{"notiflix/build/notiflix-notify-aio":"eXQLZ"}]},["2uA9t","8tzFL"], "8tzFL", "parcelRequired7c6")
 
 //# sourceMappingURL=03-promises.cd58c9ff.js.map
