@@ -21,10 +21,10 @@
   "devDependencies": {
     "parcel": "^2.8.3"
   },
-  "description": "",
   "dependencies": {
     "flatpickr": "^4.6.13",
     "gh-pages": "^5.0.0",
     "notiflix": "^3.2.6"
-  }
+  },
+  "description": ""
 }
